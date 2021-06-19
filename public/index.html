@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<style>
+    .swiper-pagination-bullet {
+    border: 2px solid rgba(244, 45, 45);
+    padding: 6px;
+    background: transparent;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: rgba(244, 45, 45);
+}
+</style>
+<body>
+    <header>
+        <div class="topheader text-center bg-primary p-2 border-b-b-width border-brd-color">
+            <div class="container mx-auto">
+                <p class="text-white font-roboto">Free shipping on orders over $80</p>
+            </div>
+        </div>
+        <div class="top--nav bg-primary pl-4 pt-4 border-b-b-width border-brd-color pb-4 pr-4">
+            <div class="container mx-auto">
+                <div class="nav-first flex justify-center items-center">
+                    <div class="logo w-2/12">
+                        <img src="images/logo.png" alt="">
+                    </div>
+                    <div class="w-6/12 pl-4 pr-4">
+                        <form action="#">
+                            <div class="flex items-center-justify-center">
+                                <div class="srch-box w-7/12">
+                                    <input
+                                        class="w-full outline-none rounded-tl-sm rounded-bl-sm h-12 pl-2 pr-2 font-roboto"
+                                        type="text" placeholder="Search...">
+                                </div>
+                                <div class="filter-search w-3/12">
+                                    <select
+                                        class="w-full h-12 pl-2 outline-none pr-2 font-roboto border-w-1 border-l-2 border-gray-400"
+                                        id="search-product-type">
+                                        <option value="" class="font-roboto" selected="selected">All categories</option>
+                                        <option class="font-roboto" value="A/V Receivers">A/V Receivers</option>
+                                        <option class="font-roboto" value="Amplifiers">Amplifiers</option>
+                                        <option class="font-roboto" value="Audio Accessories">Audio Accessories</option>
+                                        <option class="font-roboto" value="Earbuds">Earbuds</option>
+                                        <option class="font-roboto" value="Headphones">Headphones</option>
+                                        <option class="font-roboto" value="Home Cinema">Home Cinema</option>
+                                        <option class="font-roboto" value="Portable Speakers">Portable Speakers</option>
+                                        <option class="font-roboto" value="Projectors">Projectors</option>
+                                        <option class="font-roboto" value="Sound Bars">Sound Bars</option>
+                                        <option class="font-roboto" value="Speakers">Speakers</option>
+                                        <option class="font-roboto" value="Subwoofers">Subwoofers</option>
+                                        <option class="font-roboto" value="Turntables">Turntables</option>
+                                        <option class="font-roboto" value="TV Accessories">TV Accessories</option>
+                                        <option class="font-roboto" value="TVs">TVs</option>
+                                        <option class="font-roboto" value="Walkmans">Walkmans</option>
+                                    </select>
+                                </div>
+                                <div class="submit-form w-2/12">
+                                    <input type="submit"
+                                        class="w-full h-12 rounded-tr-sm rounded-br-sm cursor-pointer font-roboto"
+                                        value="search">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="header-action-list w-4/12">
+                        <ul class="flex justify-center items-center">
+                            <li class="w-4/12 text-center pl-2 pr-2 border-r-2 border-white">
+                                <label class="text-white font-roboto" for="currency">Currency</label><br>
+                                <select name="currency"
+                                    class="text-white outline-none font-roboto h-auto font-bold bg-transparent p-0"
+                                    id="currency">
+                                    <option class="font-roboto text-black" value="usd">IND </option>
+                                    <option class="font-roboto text-black" value="usd">USD $</option>
+                                </select>
+                            </li>
+                            <li class="w-4/12 pl-2 pr-2 text-center border-r-2 border-white">
+                                <label for="login-sign" class="text-white font-roboto">Login / Signup</label><br>
+                                <a class="text-white font-bold font-roboto" href="#">My account</a>
+                            </li>
+                            <li class="w-4/12 pl-2 pr-2 text-center flex justify-center items-center">
+                                <div class="cart mr-4 relative">
+                                    <svg focusable="false" class="w-cart-width h-cart-height icon icon--cart text-white"
+                                        viewBox="0 0 27 24" role="presentation">
+                                        <g transform="translate(0 1)" stroke-width="2" stroke="currentColor" fill="none"
+                                            fill-rule="evenodd">
+                                            <circle stroke-linecap="square" cx="11" cy="20" r="2"></circle>
+                                            <circle stroke-linecap="square" cx="22" cy="20" r="2"></circle>
+                                            <path d="M7.31 5h18.27l-1.44 10H9.78L6.22 0H0"></path>
+                                        </g>
+                                    </svg>
+                                    <span class="count text-black font-roboto font-semibold rounded-full absolute top-0 bg-white flex justify-center items-center w-1 h-1 p-3">0</span>
+                                </div>
+                                <span class="text-white font-bold font-roboto">Cart</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="bg-primary pt-4 pb-4 pr-6 pl-6">
+            <ul class="flex justify-start items-start">
+                <li class="pr-6"><a class="text-white font-roboto font-medium text-md" href="">All Products</a></li>
+                <li class="pr-6 pl-6"><a class="text-white font-roboto font-medium text-md" href="">New Arrivals</a></li>
+                <li class="pr-6 pl-6"><a class="text-white font-roboto font-medium text-md" href="">Sales</a></li>
+                <li class="pr-6 pl-6"><a class="text-white font-roboto font-medium text-md" href="">All Collections</a></li>
+                <li class="pr-6 pl-6"><a class="text-white font-roboto font-medium text-md" href="">Brands</a></li>
+                <li class="pr-6 pl-6"><a class="text-white font-roboto font-medium text-md" href="">Information</a></li>
+                <li class="pr-6 pl-6"><a class="text-white font-roboto font-medium text-md" href="">Blog</a></li>
+                <li class="pr-6 pl-6"><a class="text-white font-roboto font-medium text-md" href="">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="banner">
+        <div class="swiper-container mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img class="h-banner-img min-h-banner-img-min" src="images/banner-1.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img class="h-banner-img min-h-banner-img-min" src="images/banner-2.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img class="h-banner-img min-h-banner-img-min" src="images/banner-3.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img class="h-banner-img min-h-banner-img-min" src="images/banner-4.jpg" alt="">
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "fade",
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>

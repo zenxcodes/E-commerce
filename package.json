@@ -1,0 +1,29 @@
+{
+  "name": "E-commerce",
+  "version": "1.0.0",
+  "description": "",
+  "main": "tailwind.config.js",
+  "dependencies": {
+    "autoprefixer": "^10.2.6",
+    "font-awesome": "^4.7.0",
+    "postcss": "^8.3.5",
+    "swiper": "^6.7.0",
+    "tailwindcss": "^2.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "tailwindcss build ./src/styles.css -o ./public/styles.css",
+    "prod": "NODE_ENV=production tailwindcss build ./src/styles.css -o ./public/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenxcodes/E-commerce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zenxcodes/E-commerce/issues"
+  },
+  "homepage": "https://github.com/zenxcodes/E-commerce#readme"
+}
